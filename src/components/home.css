@@ -1,0 +1,43 @@
+.most-outer-div{
+     box-sizing: border-box;
+     /* border: 1px solid red;; */
+     max-width: 100vw;
+     padding:40px 0;
+}
+/*
+.poster-image{
+     background-color: blanchedalmond;
+     border: 1px solid red;;
+     width: 100%;
+     height:576px;
+     position: absolute;
+     max-width: 1170px;
+     max-height: 576px;
+     left: 0px;
+     top: 0px;
+}
+.poster-div-outer{
+     background-color: blanchedalmond;
+     border: 1px solid red;;
+     max-width: 1170px;
+     min-height: 576px;;
+     margin:0px 152px;
+} */
+
+.image-div{
+     margin: 72px 0px;
+}
+.banner-lower{
+     margin-bottom: 55px;;
+}
+.bank-offer{
+     margin-bottom:28px;
+}
+.bank-offer-list{
+     display: flex;
+     justify-content: space-between;
+     border:1px solid red
+}
+.dark{
+     background-color: #F3F5F7;
+}
