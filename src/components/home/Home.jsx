@@ -252,107 +252,6 @@ export default function Home () {
           </Container>
 
 
-
-
-
-          {/* ########################################################################################### */}
-
-
-
-
-
-{/*           <Container fluid className="dark padding-52">
-               <Row className="p-0 border width-1136 m-auto">
-                    <div className="border bank-offer width-1136 m-auto text-start p-0">
-                         <h4>
-                         <b> START THE PARTY</b>
-                         </h4>
-                    </div>
-                    <div className="p-0 m-0 d-flex justify-content-between bottom-32">
-                         <div className="thank-card" >
-                              <div className="image-div m-0">
-                                   <Image src="https://ii1.pepperfry.com/media/wysiwyg/banners/Tf_web_14092021_1.jpg"></Image>
-                              </div>
-                              <div className="image-info">
-                                   <h4>Houseparty Essential</h4>
-                                   <p>160+ Products | Starting ₹ 12,999</p>
-                              </div>
-                         </div>
-                         <div className="thank-card" >
-                              <div className="image-div m-0">
-                                   <Image src="https://ii2.pepperfry.com/media/wysiwyg/banners/Tf_web_14092021_2.jpg"></Image>
-                              </div>
-                              <div className="image-info">
-                                   <h4>Bon Appétit Corner</h4>
-                                   <p>Artsy Cutwork</p>
-                              </div>
-                         </div>
-                         <div className="thank-card" >
-                              <div className="image-div m-0">
-                                   <Image src="https://ii3.pepperfry.com/media/wysiwyg/banners/Tf_web_14092021_3.jpg"></Image>
-                              </div>
-                              <div className="image-info">
-                                   <h4>TISHYA</h4>
-                                   <p>Artsy Cutwork</p>
-                              </div>
-                         </div>
-                         <div className="thank-card" >
-                              <div className="image-div m-0">
-                                   <Image src="https://ii1.pepperfry.com/media/wysiwyg/banners/Tf_web_14092021_4.jpg"></Image>
-                              </div>
-                              <div className="image-info">
-                                   <h4>TISHYA</h4>
-                                   <p>Artsy Cutwork</p>
-                              </div>
-                         </div>
-                    </div>
-                    <div className="div-height-32"></div>
-                    <div className="p-0 m-0 d-flex justify-content-between">
-                         <div className="thank-card" >
-                              <div className="image-div m-0">
-                                   <Image src="https://ii2.pepperfry.com/media/wysiwyg/banners/Tf_web_14092021_5.jpg"></Image>
-                              </div>
-                              <div className="image-info">
-                                   <h4>TISHYA</h4>
-                                   <p>Artsy Cutwork</p>
-                              </div>
-                         </div>
-                         <div className="thank-card" >
-                              <div className="image-div m-0">
-                                   <Image src="https://ii3.pepperfry.com/media/wysiwyg/banners/Tf_web_14092021_6.jpg"></Image>
-                              </div>
-                              <div className="image-info">
-                                   <h4>TISHYA</h4>
-                                   <p>Artsy Cutwork</p>
-                              </div>
-                         </div>
-                         <div className="thank-card" >
-                              <div className="image-div m-0">
-                                   <Image src="https://ii1.pepperfry.com/media/wysiwyg/banners/Tf_web_14092021_7.jpg"></Image>
-                              </div>
-                              <div className="image-info">
-                                   <h4>TISHYA</h4>
-                                   <p>Artsy Cutwork</p>
-                              </div>
-                         </div>
-                         <div className="thank-card" >
-                              <div className="image-div m-0">
-                                   <Image src="https://ii2.pepperfry.com/media/wysiwyg/banners/Tf_web_14092021_8.jpg"></Image>
-                              </div>
-                              <div className="image-info">
-                                   <h4>TISHYA</h4>
-                                   <p>Artsy Cutwork</p>
-                              </div>
-                         </div>
-                    </div>
-               </Row>
-          </Container>
-
- */}
-
-
-
-
           {/* ########################################################################################### */}
 
 
@@ -605,6 +504,12 @@ export default function Home () {
           <div className="div-height-32"></div>
           <Container fluid className="padding-52">
           <Row className="p-0 width-1136 m-auto">
+               <div className="bank-offer width-1136  bottom-32 text-start p-0">
+                         <h3>
+                     PACK MORE PUNCH
+                         </h3>
+                         <p>More Power To Your Elbow</p>
+               </div>
               <div className="d-flex p-0">
                     <div className="m-0 p-0 vertical-card">
                     <div className="p-0 m-0 card-image overflow-hide">
@@ -721,38 +626,10 @@ export default function Home () {
                                         <div>Dining and Bars</div>
                                         <div>Beds</div>
                                    </div>
+                         </div>
                     </div>
                </div>
-          </div>
           </Row>
           </Container>
      </div>
 }
-
-/*
-                    <Row className="padding-152" >
-                              <div className="d-flex justify-content-between" >
-                                   <Image className  src="http://via.placeholder.com/368x446"  ></Image>
-                                   <Image  src="http://via.placeholder.com/368x446"  ></Image>
-                                   <Image  src="http://via.placeholder.com/368x446"  ></Image>
-                              </div>
-                              <div className="d-flex justify-content-between" >
-                                   <Image src="http://via.placeholder.com/368x446"  ></Image>
-                                   <Image  src="http://via.placeholder.com/368x446"  ></Image>
-                                   <Image  src="http://via.placeholder.com/368x446"  ></Image>
-                              </div>
-                    </Row>
-
- <Row className="padding-152" >
-                         <Row className="p-0 grid-three" >
-                              <Image className="m"  src="http://via.placeholder.com/368x446"  ></Image>
-                              <Image className="m"  src="http://via.placeholder.com/368x446"  ></Image>
-                              <Image className="m"  src="http://via.placeholder.com/368x446"  ></Image>
-                              <Image className="m"  src="http://via.placeholder.com/368x446"  ></Image>
-                              <Image className="m"  src="http://via.placeholder.com/368x446"  ></Image>
-                              <Image className="m"  src="http://via.placeholder.com/368x446"  ></Image>
-                         </Row>
-                    </Row>
-
-
-                    */
