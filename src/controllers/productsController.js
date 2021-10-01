@@ -29,6 +29,17 @@ router.get("/",async(req,res)=>{
     }
 })
 
+router.get("/:id",async(req,res)=>{
+    try{
+        const product = await Product.findById(req.params.id);
+        res.send(product)
+    }
+    catch(err){
+        res.send(err)
+    }
+})
+
+
 router.delete("/:id",async(req,res)=>{
     try{
         const product = await Product.findByIdAndDelete(req.params.id);
@@ -39,5 +50,6 @@ router.delete("/:id",async(req,res)=>{
         res.send(err)
     }
 })
+
 
 module.exports = router;
