@@ -88,9 +88,25 @@ const User = require("../models/userModel");
 
 router.post("/", async (req, res) => {
     try {
-        const inp = await User.create(req.body);
-
-        res.send(inp);
+        const valu = await User.find().lean().exec();
+        let inp={};
+        if(valu.length === 0){
+             inp = await User.create(req.body);
+        }
+        else {
+            let res = true;
+            for(key in valu){
+                if(String(valu[key].email) == String(req.body.email)){
+                    res = false;
+                    break;
+                }
+            }
+            if(res){
+                inp = await User.create(req.body);
+            }
+        }
+        //console.log(inp)
+        res.send([inp._id,inp.name]);
     }
     catch (err) {
         res.send(err);
@@ -100,7 +116,7 @@ router.post("/", async (req, res) => {
 router.get("/", async (req, res) => {
     try {
         const inp = await User.find().lean().exec();
-
+        
         res.send(inp);
     }
     catch (err) {
@@ -122,9 +138,28 @@ router.get("/:id", async (req, res) => {
 router.get("/:id/cart", async (req, res) => {
     try {
         const inp = await User.findById(req.params.id).populate("cart.data")
-        console.log('inp:', inp)
+        console.log('inp12345:', inp)
 
         res.status(201).json(inp.cart);
+    }
+    catch (err) {
+        res.send(err);
+    }
+});
+
+router.get("/:id/cart/price", async (req, res) => {
+    try {
+        const inp = await User.findById(req.params.id).populate("cart.data")
+        //console.log('inp12345:', inp);
+
+        let disSum = 0;
+        let oriSum =0;
+        inp.cart.forEach((el)=>{
+            disSum = disSum + (el.data.disPrice*el.quantity)
+            oriSum = oriSum + (el.data.oriPrice*el.quantity);
+        })
+
+        res.status(201).json([disSum,oriSum]);
     }
     catch (err) {
         res.send(err);
@@ -138,10 +173,12 @@ router.put("/addtocart", async function(req, res) {
     try {
         const data = req.body;
         data.quantity*=1
-        //console.log('data:', data);
+        console.log('data:', data);
+        if(data.item == null)return; 
         const user = await User.findById(req.body.userID);
         // console.log("user",user);
-        if (user.cart.length === 0 && data.quantity>0) {
+        // return res.send(user.cart);
+        if (user.cart.length === 0 && Number(data.quantity)>0) {
             user.cart.push({
                 data: data.item,
                 quantity: Number(data.quantity),
@@ -151,7 +188,7 @@ router.put("/addtocart", async function(req, res) {
             let flag = true;
             for (let i = 0; i < user.cart.length; i++) {
                 if (user.cart[i].data == data.item) {
-                    console.log('user1234:', user.cart[i])
+                    //console.log('user1234:', user.cart[i])
                     flag = false;
                     
                     if (Number(data.quantity) > 0) {
@@ -181,7 +218,7 @@ router.put("/addtocart", async function(req, res) {
             }
         }
 
-        //user.cart = []
+        // user.cart = []
         
         const use = await User.findByIdAndUpdate(data.userID,user,{next:true});
         //console.log("use",use);

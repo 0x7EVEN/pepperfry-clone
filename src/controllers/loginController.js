@@ -12,8 +12,9 @@ router.post("/", async function(req, res) {
      try {
           const user = await User.find({$and: [{email: req.body.email}, {password: req.body.password}]});
           if (user) {
-               res.send(user[0]._id);
+               res.send([user[0]._id,user[0].name]);
           }
+          console.log(user);
      } catch (err) {
           res.send(err);
      }
