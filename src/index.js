@@ -3,21 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter} from "react-router-dom"
-import { LoginProvider } from './context/loginContext';
+import {BrowserRouter} from "react-router-dom";
+import {LoginProvider} from './context/loginContext';
 import LoginContextProvider from './components/Contexts/LoginContext';
 import RegisterContextProvider from './components/Contexts/RegisterContext';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-    <LoginContextProvider>
-      <RegisterContextProvider>
-      <LoginProvider>
-        <App />
-      </LoginProvider>
-      </RegisterContextProvider>
-    </LoginContextProvider>
+      <LoginContextProvider>
+        <RegisterContextProvider>
+          <LoginProvider>
+            <App />
+          </LoginProvider>
+        </RegisterContextProvider>
+      </LoginContextProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
