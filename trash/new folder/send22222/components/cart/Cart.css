@@ -1,0 +1,80 @@
+.outer_div2 {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.inner_div2 {
+  /* border: 1px solid red; */
+  width: 36vw;
+  height: 100vh;
+  background: white;
+  position: absolute;
+  right: 0;
+  top: 0vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.closeBtn {
+  position: absolute;
+  right: 50px;
+  border: none;
+  top: 15px;
+
+  border: none;
+}
+
+.closeBtn > svg {
+  background: black;
+  border: none;
+}
+
+.head {
+  color: white;
+  display: flex;
+  /* border: 1px solid white; */
+  position: relative;
+  top: 15px;
+  font-size: 12px;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+}
+.head > input {
+  height: 40px;
+  width: 154px;
+}
+.head > button {
+  border: none;
+  color: white;
+  background-color: black;
+}
+
+.inner_div2 > div {
+  background: black;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+
+  position: relative;
+  bottom: -32px;
+}
+
+.subDiv {
+  height: 120px;
+  /* border: 1px solid green; */
+}
+.container {
+  /* border: 1px solid blue; */
+  background-color: white !important;
+  position: relative;
+  top: 10vh;
+}
